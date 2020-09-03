@@ -1,6 +1,15 @@
 import os
 from setuptools import setup, find_packages
 
+# get paths to extensions
+extension_files = []
+for (dirname, dirnames, filenames) in os.walk('e2xhelp/nbextensions'):
+    root = os.path.relpath(dirname, 'e2xhelp')
+    for filename in filenames:
+        if filename.endswith('.pyc'):
+            continue
+        extension_files.append(os.path.join(root, filename))
+
 # get paths to all static files and templates
 static_files = []
 for (dirname, dirnames, filenames) in os.walk('e2xhelp/server_extensions/help/static'):
@@ -19,6 +28,7 @@ setup_args = dict(
     license='MIT',
     packages=find_packages(),
     package_data= {
+        'e2xhelp': extension_files,
         'e2xhelp.server_extensions.help': static_files
     },
     install_requires=[
