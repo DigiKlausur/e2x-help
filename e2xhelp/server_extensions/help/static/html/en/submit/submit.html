@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="de" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Klausur abgeben &mdash; E2X - Electronic Exams with Jupyterhub latest (2549cfb) Dokumentation</title>
+  <title>Submit Exam &mdash; E2X - Electronic Exams with Jupyterhub latest (8c5e41e) documentation</title>
   
 
   
@@ -26,19 +26,18 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
-    <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="Ändern des Tastaturlayouts" href="../keyboard/keyboard.html" />
-    <link rel="prev" title="Klausur herunterladen" href="../fetch/fetch.html" /> 
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Change the Keyboard Layout" href="../keyboard/keyboard.html" />
+    <link rel="prev" title="Fetch Exam" href="../fetch/fetch.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -62,7 +61,7 @@
             
             
               <div class="version">
-                latest (2549cfb)
+                latest (8c5e41e)
               </div>
             
           
@@ -88,27 +87,27 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../fetch/fetch.html">Klausur herunterladen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fetch/fetch.html">Fetch Exam</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Klausur abgeben</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submitting-the-exam">Abgabe der Klausur</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#save-your-exam">1. Speichern Sie Ihre Klausur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#submit-your-exam">2. Geben Sie Ihre Klausur ab</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#check-your-timestamp">3. Überprüfen Sie den Zeitstempel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Submit Exam</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submitting-the-exam">Submitting the exam</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#save-your-exam">1. Save your exam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submit-your-exam">2. Submit your exam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-your-timestamp">3. Check your timestamp</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#validating-your-submission">Überprüfung der Abgabe</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#check-the-html-version-of-your-submission">1. Überprüfen Sie die HTML Version Ihrer Abgabe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#check-your-timestamp-in-the-html-version">2. Überprüfen Sie den Zeitstempel im Notebook</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#check-the-textfile-with-your-hashcode">3. Überprüfen Sie die Textdatei mit Ihrer Prüfsumme (Hashcode)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-out-the-sheet-for-the-exam-supervisor">4. Füllen Sie den Zettel für die Aufsicht aus</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-out-the-sheet-for-you-to-take-home">5. Füllen Sie den Zettel zum Mitnehmen aus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#validating-your-submission">Validating your submission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#check-the-html-version-of-your-submission">1. Check the HTML version of your submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-your-timestamp-in-the-html-version">2. Check your timestamp in the html version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-the-textfile-with-your-hashcode">3. Check the textfile with your hashcode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-out-the-sheet-for-the-exam-supervisor">4. Fill out the sheet for the exam supervisor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-out-the-sheet-for-you-to-take-home">5. Fill out the sheet for you to take home</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../keyboard/keyboard.html">Ändern des Tastaturlayouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard/keyboard.html">Change the Keyboard Layout</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../latex/latex.html">LaTeX Math Editor</a></li>
@@ -158,7 +157,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Klausur abgeben</li>
+      <li>Submit Exam</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,69 +177,80 @@
            <div itemprop="articleBody">
             
   <div class="section" id="submit-exam">
-<h1>Klausur abgeben<a class="headerlink" href="#submit-exam" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Die Abgabe der Klausur besteht aus zwei Schritten.</p>
+<h1>Submit Exam<a class="headerlink" href="#submit-exam" title="Permalink to this headline">¶</a></h1>
+<p>Submitting your exam consists of two steps.</p>
 <ol class="arabic simple">
-<li><p>Abgabe</p></li>
-<li><p>Überprüfung der Abgabe</p></li>
+<li><p>Submit</p></li>
+<li><p>Validate your submission</p></li>
 </ol>
 <div class="section" id="submitting-the-exam">
-<h2>Abgabe der Klausur<a class="headerlink" href="#submitting-the-exam" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Submitting the exam<a class="headerlink" href="#submitting-the-exam" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="save-your-exam">
-<h3>1. Speichern Sie Ihre Klausur<a class="headerlink" href="#save-your-exam" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>1. Save your exam<a class="headerlink" href="#save-your-exam" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default">
-<img alt="../_images/save.de.png" src="../_images/save.de.png" />
+<img alt="../_images/save.png" src="../_images/save.png" />
 </div>
 </div>
 <div class="section" id="submit-your-exam">
-<h3>2. Geben Sie Ihre Klausur ab<a class="headerlink" href="#submit-your-exam" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>2. Submit your exam<a class="headerlink" href="#submit-your-exam" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default">
-<img alt="../_images/submit.de.png" src="../_images/submit.de.png" />
+<img alt="../_images/submit.png" src="../_images/submit.png" />
 </div>
 </div>
 <div class="section" id="check-your-timestamp">
-<h3>3. Überprüfen Sie den Zeitstempel<a class="headerlink" href="#check-your-timestamp" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>3. Check your timestamp<a class="headerlink" href="#check-your-timestamp" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default">
-<img alt="../_images/submitted.de.png" src="../_images/submitted.de.png" />
+<img alt="../_images/submitted.png" src="../_images/submitted.png" />
 </div>
 </div>
 </div>
 <div class="section" id="validating-your-submission">
-<h2>Überprüfung der Abgabe<a class="headerlink" href="#validating-your-submission" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Sie können Ihre Abgabe nach dem Klick auf Submit überprüfen. Öffnen Sie hierfür die generierte HTML Datei.</p>
+<h2>Validating your submission<a class="headerlink" href="#validating-your-submission" title="Permalink to this headline">¶</a></h2>
+<p>You can validate your submission after you submit it by opening
+the html version of the submitted version.</p>
 <div class="section" id="check-the-html-version-of-your-submission">
-<h3>1. Überprüfen Sie die HTML Version Ihrer Abgabe<a class="headerlink" href="#check-the-html-version-of-your-submission" title="Link zu dieser Überschrift">¶</a></h3>
-<p>In der HTML Datei sollten alle Ihre Antworten stehen.</p>
+<h3>1. Check the HTML version of your submission<a class="headerlink" href="#check-the-html-version-of-your-submission" title="Permalink to this headline">¶</a></h3>
+<p>Validate that you have submitted the most recent version
+of your work. Anything on the html should have been present
+on the server.</p>
 <div class="figure align-default">
 <img alt="../_images/html_submission.png" src="../_images/html_submission.png" />
 </div>
 </div>
 <div class="section" id="check-your-timestamp-in-the-html-version">
-<h3>2. Überprüfen Sie den Zeitstempel im Notebook<a class="headerlink" href="#check-your-timestamp-in-the-html-version" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Am Ende der Seite finden Sie den Zeitstempler (Timestamp) Ihrer Abgabe.</p>
+<h3>2. Check your timestamp in the html version<a class="headerlink" href="#check-your-timestamp-in-the-html-version" title="Permalink to this headline">¶</a></h3>
+<p>At the bottom of the page, you will find the timestamp of your
+submission.</p>
 <div class="figure align-default" id="id1">
 <img alt="../_images/timestamp_html.png" src="../_images/timestamp_html.png" />
-<p class="caption"><span class="caption-text">Stellen Sie sicher, dass der Zeitstempel korrekt ist. Aktualisieren Sie das Browserfenster falls nötig.</span><a class="headerlink" href="#id1" title="Link zu diesem Bild">¶</a></p>
+<p class="caption"><span class="caption-text">Verify that the timestamp is updated and reload
+the page if necessary.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>Unter dem Zeitstempel finden Sie den Hashcode. Sollten Sie diese Datei nicht öffnen können, finden Sie den Hashcode auch in der Textdatei (siehe nächster Abschnitt).</p>
+<p>You can also find the hashcode below the timestamp on this page.
+However, should you not be able to open this file, you can find
+the hashcode in the text file as described in the next section.</p>
 </div>
 <div class="section" id="check-the-textfile-with-your-hashcode">
-<h3>3. Überprüfen Sie die Textdatei mit Ihrer Prüfsumme (Hashcode)<a class="headerlink" href="#check-the-textfile-with-your-hashcode" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Navigieren Sie zur Textdatei mit dem Hashcode. Der Name der Datei ist Ihr Benutzername, gefolgt von _info.txt (<cite>bspw. tmetzl2m_info.txt</cite>).</p>
+<h3>3. Check the textfile with your hashcode<a class="headerlink" href="#check-the-textfile-with-your-hashcode" title="Permalink to this headline">¶</a></h3>
+<p>Go to home page, and then open info file (<cite>e.g. tmetzl2m_info.txt</cite>)
+and find your hashcode there.</p>
 <div class="figure align-default">
 <img alt="../_images/hashcode_txt.png" src="../_images/hashcode_txt.png" />
 </div>
 </div>
 <div class="section" id="fill-out-the-sheet-for-the-exam-supervisor">
-<h3>4. Füllen Sie den Zettel für die Aufsicht aus<a class="headerlink" href="#fill-out-the-sheet-for-the-exam-supervisor" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Notieren Sie den Hashcode und Zeitstempel (HH:MM:SS) auf dem Zettel für die Aufsicht.Wenn Sie sich in einem Laptop Poolraum befinden, notieren Sie zusätzlich die Nummer des USB Sticks und des Laptops auf dem Zettel.</p>
+<h3>4. Fill out the sheet for the exam supervisor<a class="headerlink" href="#fill-out-the-sheet-for-the-exam-supervisor" title="Permalink to this headline">¶</a></h3>
+<p>Write down your hashcode and timestamp (HH:MM:SS) on the provided
+sheet. Also, write down the laptop and usb stick number if you
+do your exam in laptop pool rooms.</p>
 <div class="figure align-default">
 <img alt="../_images/sheet_supervisor.png" src="../_images/sheet_supervisor.png" />
 </div>
 </div>
 <div class="section" id="fill-out-the-sheet-for-you-to-take-home">
-<h3>5. Füllen Sie den Zettel zum Mitnehmen aus<a class="headerlink" href="#fill-out-the-sheet-for-you-to-take-home" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Notieren Sie den Hashcode und Zeitstempel (HH:MM:SS) auf dem Zettel, welchen Sie mitnehmen.</p>
+<h3>5. Fill out the sheet for you to take home<a class="headerlink" href="#fill-out-the-sheet-for-you-to-take-home" title="Permalink to this headline">¶</a></h3>
+<p>Write down your hashcode and timestamp (HH:MM:SS) on the provided
+sheet.</p>
 <div class="figure align-default">
 <img alt="../_images/sheet_student.png" src="../_images/sheet_student.png" />
 </div>
@@ -256,10 +266,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../keyboard/keyboard.html" class="btn btn-neutral float-right" title="Ändern des Tastaturlayouts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../keyboard/keyboard.html" class="btn btn-neutral float-right" title="Change the Keyboard Layout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../fetch/fetch.html" class="btn btn-neutral float-left" title="Klausur herunterladen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../fetch/fetch.html" class="btn btn-neutral float-left" title="Fetch Exam" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
