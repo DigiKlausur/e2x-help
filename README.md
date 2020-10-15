@@ -8,8 +8,9 @@ The basic e2x help in English and German is served under ```/e2xhelp/base/html/e
 
 ## Shared files
 
-By creating the config ```e2xhelp_config.py``` under ```/share/e2xhelp/``` you can serve additonal files.
+By creating the config ```e2xhelp_config.py``` you can serve additonal files.
 These files will be served under ```/e2xhelp/shared/```.
+The ```e2xhelp_config.py``` should be located in any of the Jupyter config directories. You can find out which directories these are by executing ```jupyter --paths``` in the terminal and look at the directories under config.
 
 Example config:
 
@@ -18,8 +19,6 @@ Example config:
 
 c = get_config()
 
-# Make sure the shared path is added to the app
-c.Help.use_shared_path = True
 # Specifiy the path to your extra files
 c.Help.shared_path = '/srv/shared_dir'
 ```
