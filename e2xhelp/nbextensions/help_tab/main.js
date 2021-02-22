@@ -49,11 +49,12 @@ define([
                         processData: false,
                         cache: false,
                         success: function(data, status, xhr) {
+                            $('#resources ul').remove();
                             let links = $('<ul/>');
                             data.forEach(function(entry) {
                                 links.append($('<li/>').append(
                                     $('<a/>')
-                                    .attr('href', utils.url_path_join('e2xhelp/shared/', entry[1]))
+                                    .attr('href', utils.url_path_join(Jupyter.notebook_list.base_url, 'e2xhelp/shared/', entry[1]))
                                     .attr('target', '_blank')
                                     .append(entry[0])));
                             });
