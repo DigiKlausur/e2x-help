@@ -24,8 +24,6 @@ class ListFilesHandler(IPythonHandler):
             dirs[:] = [d for d in dirs if d not in exclude_dirs]
 
             for name in files:
-                if name == 'index.html':
-                    exclude_dirs.append(dirs)
                 file_list.append((os.path.join(root, name), os.path.join(root, name)))
         
         file_list = [(os.path.relpath(name, path), os.path.relpath(url, path)) for name, url in file_list]
