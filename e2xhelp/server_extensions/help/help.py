@@ -66,6 +66,6 @@ class Help(LoggingConfigurable):
 
 def load_jupyter_server_extension(nbapp):
     webapp = nbapp.web_app
-    help = Help()
-    help.init_handlers(webapp)
-    help.init_tornado_settings(webapp)
+    e2xhelp = Help()
+    e2xhelp.init_handlers(webapp)
+    e2xhelp.init_tornado_settings(webapp)
