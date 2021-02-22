@@ -17,6 +17,14 @@ define([
                 .text('Help')
             )
         );
+        $('#tabs').append(
+            $('<li/>').append(
+                $('<a/>')
+                .attr('href', Jupyter.notebook_list.base_url + 'e2xhelp/shared/cheatsheet/python_basics_cheatsheet_and_plot.pdf')
+                .attr('target', '_blank')
+                .text('Shared test')
+            )
+        );
     };
 
     return {
