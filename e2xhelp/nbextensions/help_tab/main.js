@@ -54,6 +54,7 @@ define([
                                 links.append($('<li/>').append(
                                     $('<a/>')
                                     .attr('href', utils.url_path_join('e2xhelp/shared/', entry[1]))
+                                    .attr('target', '_blank')
                                     .append(entry[0])));
                             });
                             if (data.length > 0) {
