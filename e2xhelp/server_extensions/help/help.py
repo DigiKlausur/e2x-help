@@ -6,6 +6,7 @@ from traitlets.config.loader import PyFileConfigLoader
 from traitlets.config import LoggingConfigurable, Config
 from traitlets import Unicode, Bool
 from textwrap import dedent
+from .import apihandlers
 
 class Help(LoggingConfigurable):
 
@@ -44,17 +45,27 @@ class Help(LoggingConfigurable):
                     'default_filename': 'index.html'
                 })
             )
+        handlers.extend(apihandlers.default_handlers)
         return handlers
 
-def init_handlers(webapp):
-    h = Help().get_handlers()
+    def init_tornado_settings(self, webapp):
+        tornado_settings = dict(
+            e2xhelp_shared_dir=self.shared_path
+        )
+        webapp.settings.update(tornado_settings)
 
-    def rewrite(x):
-        pat = ujoin(webapp.settings['base_url'], x[0].lstrip('/'))
-        return (pat, ) + x[1:]
 
-    webapp.add_handlers('.*$', [rewrite(x) for x in h])
+    def init_handlers(self, webapp):
+        h = self.get_handlers()
+
+        def rewrite(x):
+            pat = ujoin(webapp.settings['base_url'], x[0].lstrip('/'))
+            return (pat, ) + x[1:]
+
+        webapp.add_handlers('.*$', [rewrite(x) for x in h])
 
 def load_jupyter_server_extension(nbapp):
     webapp = nbapp.web_app
-    init_handlers(webapp)
+    e2xhelp = Help()
+    e2xhelp.init_handlers(webapp)
+    e2xhelp.init_tornado_settings(webapp)
