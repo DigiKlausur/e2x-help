@@ -25,7 +25,7 @@ define([
 
         let resources = $('<div/>').attr('id', 'resources');
         resources.append($('<h4/>').append('Additional Resources:'));
-        resources.append($('<ul/>').attr('id', 'additional-links'));
+        resources.append($('<div/>').attr('id', 'additional-links'));
         body.append(resources);
         return body;
     }
@@ -50,8 +50,9 @@ define([
                         processData: false,
                         cache: false,
                         success: function(data, status, xhr) {
-
-                            let links = $('#additional-links');
+                            let additional_links = $('#additional-links');
+                            additional_links.empty();
+                            let links = $('<ul/>');
                             links.empty();
                             data.forEach(function(entry) {
                                 links.append($('<li/>').append(
@@ -61,9 +62,9 @@ define([
                                     .append(entry[0])));
                             });
                             if (data.length > 0) {
-                                $('#resources').append(links);
+                                additional_links.append(links);
                             } else {
-                                $('#resources').append('There are no additional resources!');
+                                additional_links.append('There are no additional resources!');
                             }
 
                         },
