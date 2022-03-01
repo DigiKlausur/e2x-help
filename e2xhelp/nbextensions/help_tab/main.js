@@ -25,6 +25,7 @@ define([
 
         let resources = $('<div/>').attr('id', 'resources');
         resources.append($('<h4/>').append('Additional Resources:'));
+        resources.append($('<ul/>').attr('id', 'additional-links'));
         body.append(resources);
         return body;
     }
@@ -49,8 +50,9 @@ define([
                         processData: false,
                         cache: false,
                         success: function(data, status, xhr) {
-                            $('#resources ul').remove();
-                            let links = $('<ul/>');
+
+                            let links = $('#additional-links');
+                            links.empty();
                             data.forEach(function(entry) {
                                 links.append($('<li/>').append(
                                     $('<a/>')
